@@ -55,11 +55,11 @@ while IFS=";" read -r username groups; do
  echo "$(date) - Created group: $group" >> $LOG_FILE
  fi
  usermod -aG $group $username
- echo "$(date) - Added $username to group: $group" >> $LOG_FILE
+ echo "$(date) - Added $username to group: $group" >> $LOG_FILEs
  done
  fi
  else
  echo "$(date) - User $username already exists" >> $LOG_FILE
  fi
 done < "$USER_FILE"
-echo "User creation process completed. Check $LOG_FILE for details."
+echo "The user creation process is completed."
